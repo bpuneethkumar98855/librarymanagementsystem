@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Library Management System</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="header">
+    <h1>📚 Library Management System</h1>
+    <button id="darkModeToggle">🌙 Dark Mode</button>
+  </div>
+
+  <!-- Alert container -->
+  <div id="alertBox" class="alert"></div>
+
+  <div class="form-container">
+    <h2>Enter Book Details</h2>
+    <input type="text" id="title" placeholder="Book Title" />
+    <input type="text" id="author" placeholder="Author" />
+    <input type="text" id="genre" placeholder="Genre" />
+    <button id="addBookBtn">Add Book</button>
+    <button id="updateBookBtn" style="display:none;">Update Book</button>
+  </div>
+
+  <div class="controls">
+    <input type="text" id="search" placeholder="Search by title or author" />
+    <select id="sort">
+      <option value="">Sort By</option>
+      <option value="title">Title</option>
+      <option value="author">Author</option>
+    </select>
+  </div>
+
+  <h2>All Books (<span id="count">0</span>)</h2>
+  <div id="bookList"></div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Library Management System | <a href="mailto:info@library.com">Contact Us</a>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

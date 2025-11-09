@@ -1,0 +1,257 @@
+/* ===== Base Layout ===== */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #e9f0ff 0%, #ffffff 100%);
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  color: #333;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* ===== Header (Heading + Dark Mode) ===== */
+.header {
+  display: flex;
+  flex-direction: column; /* stack heading and button */
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 2.5em;
+  color: #007bff;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  margin: 0;
+}
+
+#darkModeToggle {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+#darkModeToggle:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+/* ===== Dark Mode ===== */
+body.dark {
+  background: linear-gradient(135deg, #0f0f0f 0%, #1e1e1e 100%);
+  color: #f1f1f1;
+}
+
+body.dark h1 {
+  color: #66b2ff;
+}
+
+body.dark .form-container,
+body.dark .book-card {
+  background: #262626; /* smoother dark background */
+  color: #ddd;
+  box-shadow: 0 4px 20px rgba(255,255,255,0.05);
+  border: 1px solid #444;
+}
+
+body.dark input,
+body.dark select {
+  background: #333;
+  color: #eee;
+  border: 1px solid #555;
+}
+
+body.dark button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* ===== Form Container ===== */
+.form-container {
+  background: #f0f8ff; /* light blue background */
+  padding: 35px 50px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  max-width: 450px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.form-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.12);
+}
+
+/* ===== Inputs, Selects, Buttons ===== */
+input, select {
+  width: 90%;
+  max-width: 360px;
+  margin: 12px auto;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  display: block;
+  outline: none;
+  transition: all 0.3s;
+}
+
+input:focus, select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 10px rgba(0,123,255,0.3);
+}
+
+button {
+  width: 95%;
+  max-width: 360px;
+  padding: 12px;
+  margin: 12px auto;
+  display: block;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* ===== Controls ===== */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.controls input,
+.controls select {
+  width: 200px;
+  max-width: 250px;
+  margin: 5px 0;
+}
+
+/* ===== All Books Heading ===== */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+/* ===== Book List ===== */
+#bookList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* ===== Book Cards ===== */
+.book-card {
+  background: #f8f9ff; /* light background for cards */
+  width: 250px;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: all 0.3s;
+  animation: fadeInUp 0.6s ease forwards;
+  border: 1px solid #ccc;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.book-card h3 {
+  color: #007bff;
+  margin-bottom: 12px;
+}
+
+.book-card p {
+  margin: 6px 0;
+  color: #555;
+}
+
+.book-card button {
+  padding: 8px 12px;
+  margin: 6px 4px;
+  font-size: 13px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.book-card button:first-child {
+  background-color: #28a745;
+  color: white;
+}
+
+.book-card button:last-child {
+  background-color: #dc3545;
+  color: white;
+}
+
+.book-card button:hover {
+  opacity: 0.9;
+}
+
+/* ===== Animation ===== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* ===== Alerts ===== */
+.alert {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  display: none;
+  z-index: 999;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  animation: slideIn 0.5s ease;
+}
+
+.alert.success { background-color: #28a745; color: white; }
+.alert.error { background-color: #dc3545; color: white; }
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* ===== Footer ===== */
+footer {
+  margin-top: 50px;
+  padding: 15px;
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .form-container { width: 90%; }
+  .controls { flex-direction: column; align-items: center; }
+  #bookList { flex-direction: column; align-items: center; }
+}
