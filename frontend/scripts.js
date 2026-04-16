@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:5000";
+const API_URL = "https://librarymanagementsystem-2-bsu0.onrender.com";
 
 const addBookBtn = document.getElementById("addBookBtn");
 const updateBookBtn = document.getElementById("updateBookBtn");
